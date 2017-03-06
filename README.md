@@ -1,6 +1,10 @@
 # JS-ticker
 
-Usage:
+### Demo:
+
+[Demo](https://ilkkao.github.io/js-ticker/)
+
+### Usage:
 
 ```
 <html>
@@ -21,3 +25,12 @@ Usage:
 </html>
 ```
 
+### API
+
+#### new Scroller(text)
+
+`text` Text to scroll
+
+### scroller.delete()
+
+Remove scroller from the page

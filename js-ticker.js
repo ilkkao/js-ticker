@@ -46,16 +46,12 @@ class JSTicker {
         const animationStyles = document.createElement('style')
 
         animationStyles.innerHTML = `
-            .inner {
-                left: ${width * -1};
-            }
-
             @keyframes scroll {
                 0% {
-                    transform: translate3d(${screenWidth + width}px, 0px, 0px);
+                    transform: translate3d(${screenWidth}px, 0px, 0px);
                 }
                 100% {
-                    transform: translate3d(0px, 0px, 0px);
+                    transform: translate3d(${width * -1}px, 0px, 0px);
                 }
             }
 

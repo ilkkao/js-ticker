@@ -1,5 +1,7 @@
 # JS-ticker
 
+Opionated news ticker component.
+
 ### Demo:
 
 [Demo](https://ilkkao.github.io/js-ticker/)

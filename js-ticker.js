@@ -1,19 +1,17 @@
-class Scroller {
+class JSTicker {
     constructor(text) {
         const link = document.createElement('link');
-
-        Object.assign(link, {
-            href: 'https://fonts.googleapis.com/css?family=Roboto+Mono:700',
-            rel: 'stylesheet'
-        });
+        link.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:700';
+        link.rel = 'stylesheet';
 
         document.getElementsByTagName('head')[0].appendChild(link);
 
         const inner = document.createElement('div');
-        Object.assign(inner, { className: 'inner', innerHTML: text });
+        inner.className = 'inner';
+        inner.innerHTML = text;
 
         const wrapper = document.createElement('div');
-        Object.assign(wrapper, { className: 'wrapper' });
+        wrapper.className = 'wrapper';
         wrapper.appendChild(inner);
 
         document.getElementsByTagName('body')[0].appendChild(wrapper);
@@ -29,10 +27,10 @@ class Scroller {
 
             .inner {
                 font-family: 'Roboto Mono', monospace;
-                font-size: 26px;
+                font-size: 30px;
                 color: white;
-                height: 30px;
-                line-height: 28px;
+                height: 38px;
+                line-height: 36px;
                 display: inline-block;
                 position: relative;
             }
@@ -41,7 +39,6 @@ class Scroller {
         document.body.appendChild(styles);
 
         const screenWidth = document.documentElement.clientWidth;
-
         const width = parseInt(inner.offsetWidth);
         const animationStyles = document.createElement('style')
 
@@ -76,3 +73,5 @@ class Scroller {
         this.elems.forEach(elem => elem.remove());
     }
 }
+
+module.exports = JSTicker;

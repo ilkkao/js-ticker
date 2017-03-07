@@ -20,6 +20,8 @@ class JSTicker {
 
         styles.innerHTML = `
             .wrapper {
+                top: 0;
+                z-index: 2147483647;
                 width: 100vw;
                 position: fixed;
                 background-color: red;
@@ -27,6 +29,7 @@ class JSTicker {
 
             .inner {
                 font-family: 'Roboto Mono', monospace;
+                z-index: 2147483647;
                 font-size: 30px;
                 color: white;
                 height: 38px;

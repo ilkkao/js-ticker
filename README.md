@@ -17,7 +17,7 @@ Opionated news ticker component.
                 margin: 0;
             }
         </style>
-        <script src="https://cdn.rawgit.com/ilkkao/js-ticker/7bef378a/js-ticker.js"></script>
+        <script src="https://cdn.rawgit.com/ilkkao/js-ticker/077ba180e217166932cf6354e8cd89fde742a78e/dist/js-ticker.js"></script>
     </head>
     <body>
         <script>

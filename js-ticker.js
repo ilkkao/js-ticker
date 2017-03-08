@@ -46,20 +46,37 @@ class JSTicker {
         const animationStyles = document.createElement('style')
 
         animationStyles.innerHTML = `
-            @keyframes scroll {
+            @-webkit-keyframes scroll {
                 0% {
-                    transform: translate3d(${screenWidth}px, 0px, 0px);
+                    -webkit-transform: translate3d(${screenWidth}px, 0px, 0px);
+                            transform: translate3d(${screenWidth}px, 0px, 0px);
                 }
                 100% {
-                    transform: translate3d(${width * -1}px, 0px, 0px);
+                    -webkit-transform: translate3d(${width * -1}px, 0px, 0px);
+                            transform: translate3d(${width * -1}px, 0px, 0px);
+                }
+            }
+
+            @keyframes scroll {
+                0% {
+                    -webkit-transform: translate3d(${screenWidth}px, 0px, 0px);
+                            transform: translate3d(${screenWidth}px, 0px, 0px);
+                }
+                100% {
+                    -webkit-transform: translate3d(${width * -1}px, 0px, 0px);
+                            transform: translate3d(${width * -1}px, 0px, 0px);
                 }
             }
 
             .inner {
-                animation-name: scroll;
-                animation-duration: 10s;
-                animation-iteration-count: infinite;
-                animation-timing-function: linear;
+                -webkit-animation-name: scroll;
+                        animation-name: scroll;
+                -webkit-animation-duration: 10s;
+                        animation-duration: 10s;
+                -webkit-animation-iteration-count: infinite;
+                        animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                        animation-timing-function: linear;
             }
         `;
 

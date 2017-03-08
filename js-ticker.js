@@ -1,5 +1,5 @@
 class JSTicker {
-    constructor(text) {
+    constructor(text, { scroll = false} = {}) {
         const link = document.createElement('link');
         link.href = 'https://fonts.googleapis.com/css?family=Roboto+Mono:700';
         link.rel = 'stylesheet';
@@ -45,7 +45,8 @@ class JSTicker {
         const width = parseInt(inner.offsetWidth);
         const animationStyles = document.createElement('style')
 
-        animationStyles.innerHTML = `
+        if (scroll) {
+          animationStyles.innerHTML = `
             @-webkit-keyframes scroll {
                 0% {
                     -webkit-transform: translate3d(${screenWidth}px, 0px, 0px);
@@ -78,7 +79,14 @@ class JSTicker {
                 -webkit-animation-timing-function: linear;
                         animation-timing-function: linear;
             }
-        `;
+          `;
+        } else {
+          animationStyles.innerHTML = `
+            .inner {
+              padding-left: 20px;
+            }
+          `;
+        }
 
         document.body.appendChild(animationStyles);
 
